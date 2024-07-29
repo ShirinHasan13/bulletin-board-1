@@ -7,16 +7,36 @@ class BoardsController < ApplicationController
     render({ :template => "boards/index" })
   end
 
+ # def show
+   # the_id = params.fetch("path_id")
+
+   # matching_boards = Board.where({ :id => the_id })
+
+   # @the_board = matching_boards.at(0)
+
+   # render({ :template => "boards/show" })
+  #end
+
+ # def show
+   # matching_boards = Board.where({ :id => params.fetch("id") })
+   # @the_board = matching_boards.at(0)
+
+   # render({ :template => "boards/show" })
+  #end
+  
   def show
-    the_id = params.fetch("path_id")
+    the_id = params.fetch("id")
+    puts "Fetching board with ID: #{the_id}"
 
     matching_boards = Board.where({ :id => the_id })
+    puts "Matching boards: #{matching_boards.inspect}"
 
     @the_board = matching_boards.at(0)
+    puts "@the_board: #{@the_board.inspect}"
 
     render({ :template => "boards/show" })
   end
-
+  
   def create
     the_board = Board.new
     the_board.name = params.fetch("query_name")

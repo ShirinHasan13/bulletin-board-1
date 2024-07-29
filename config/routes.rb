@@ -27,7 +27,9 @@ Rails.application.routes.draw do
   # READ
   get("/boards", { :controller => "boards", :action => "index" })
   
-  get("/boards/:path_id", { :controller => "boards", :action => "show" })
+  #get("/boards/:path_id", { :controller => "boards", :action => "show" })
+  get("/boards/:id", { :controller => "boards", :action => "show" })
+
   
   # UPDATE
   

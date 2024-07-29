@@ -1,7 +1,7 @@
 <div>
   <div>
     <h1>
-      List of all boards
+      All boards
     </h1>
   </div>
 </div>
@@ -37,7 +37,37 @@
 <li>
 
 <a href="/boards/<%= a_board.id %>"><%= a_board.name %></a>
-
+</li>
 <% end %> 
 </ul>
+
+<div>
+<div>
+<table border="1">
+<tr>
+<th>
+ID
+</th>
+
+<th>
+Name
+</th>
+
+<th>
+Created at
+</th>
+
+<th>
+Updated at
+</th>
+
+<th></th>
+</tr>
+
+<% @list_of_boards.each do |a_board| %>
+
+<tr>
+<td>
+<%= a_board.id %>
+</td>
 
