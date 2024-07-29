@@ -8,14 +8,14 @@ Rails.application.routes.draw do
   # READ
   get("/posts", { :controller => "posts", :action => "index" })
   
-  get("/posts/:path_id", { :controller => "posts", :action => "show" })
+  get("/posts/:id", { :controller => "posts", :action => "show" })
   
   # UPDATE
   
-  post("/modify_post/:path_id", { :controller => "posts", :action => "update" })
+  post("/modify_post/:id", { :controller => "posts", :action => "update" })
   
   # DELETE
-  get("/delete_post/:path_id", { :controller => "posts", :action => "destroy" })
+  get("/delete_post/:id", { :controller => "posts", :action => "destroy" })
 
   #------------------------------
 
@@ -27,16 +27,16 @@ Rails.application.routes.draw do
   # READ
   get("/boards", { :controller => "boards", :action => "index" })
   
-  #get("/boards/:path_id", { :controller => "boards", :action => "show" })
+  #get("/boards/:id", { :controller => "boards", :action => "show" })
   get("/boards/:id", { :controller => "boards", :action => "show" })
 
   
   # UPDATE
   
-  post("/modify_board/:path_id", { :controller => "boards", :action => "update" })
+  post("/modify_board/:id", { :controller => "boards", :action => "update" })
   
   # DELETE
-  get("/delete_board/:path_id", { :controller => "boards", :action => "destroy" })
+  get("/delete_board/:id", { :controller => "boards", :action => "destroy" })
 
   #------------------------------
 
